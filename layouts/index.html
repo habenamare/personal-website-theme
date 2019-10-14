@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ with .Params.profileImage }}
+    <div class="level">
+      <div class="level-item">
+        <img
+          width="250"
+          height="250"
+          src="{{ . }}"
+          style="border-radius: 50%;"
+        />
+      </div>
+    </div>
+  {{ end }}
+
+  <div class="level">
+    <div class="level-item">
+      <p style="font-size: 3rem; font-family: 'Roboto Slab', serif;">
+        {{ .Site.Params.fullName }}
+      </p>
+    </div>
+  </div>
+{{ end }}
