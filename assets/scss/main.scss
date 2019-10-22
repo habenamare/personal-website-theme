@@ -27,3 +27,27 @@ $colors: map-merge($colors, $customColors);
 
 // Import the remaining part of Bulma
 @import "bulma/bulma.sass";
+
+#hero {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+
+  .profile-image {
+    border-radius: 50%;
+  }
+
+  .full-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+  }
+
+  .short-description {
+    font-family: 'IBM Plex Sans', sans;
+    font-size: 1.25rem;
+  }
+}
+
+#navbar {
+  margin-bottom: 0.5rem;
+}

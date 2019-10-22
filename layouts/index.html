@@ -1,22 +1,30 @@
 {{ define "main" }}
-  {{ with .Params.profileImage }}
-    <div class="level">
-      <div class="level-item">
-        <img
-          width="250"
-          height="250"
-          src="{{ . }}"
-          style="border-radius: 50%;"
-        />
+  <section id="hero">
+    {{ with .Params.profileImage }}
+      <div class="level">
+        <div class="level-item">
+          <img
+            class="profile-image"
+            width="250"
+            height="250"
+            src="{{ . }}"
+          />
+        </div>
+      </div>
+    {{ end }}
+
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <p class="full-name">
+          {{ .Site.Params.fullName }}
+        </p>
+
+        {{ with .Params.shortDescription }}
+          <p class="short-description">
+            {{ . }}
+          </p>
+        {{ end }}
       </div>
     </div>
-  {{ end }}
-
-  <div class="level">
-    <div class="level-item">
-      <p style="font-size: 3rem; font-family: 'Roboto Slab', serif;">
-        {{ .Site.Params.fullName }}
-      </p>
-    </div>
-  </div>
+  </section>
 {{ end }}
