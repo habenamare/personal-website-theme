@@ -1,2 +1,10 @@
 [params]
   fullName = "Full Name"
+
+  [[params.navItems]]
+    title = "Home"
+    path = "/"
+  
+  [[params.navItems]]
+    title = "Blog"
+    path = "/posts|/blog"

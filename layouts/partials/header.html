@@ -4,11 +4,11 @@
   role="navigation"
   aria-label="main navigation"
 >
-  <div class="level-item">
-    <a class="is-size-3">Home</a>
-  </div>
-
-  <div class="level-item">
-    <a class="is-size-3">Blog</a>
-  </div>
+  {{ range $i, $navItem :=  .Site.Params.navItems }}
+    <div class="level-item">
+      <a class="is-size-3" href="{{ $navItem.path }}">
+        {{ $navItem.title }}
+      </a>
+    </div>
+  {{ end }}
 </nav>
