@@ -26,6 +26,20 @@
         {{ end }}
       </div>
     </div>
+
+    {{ with .Params.socialNetworks }}
+      <div class="social-networks">
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            {{ range $s := . }}
+              <a href="{{ $s.link }}" target="_blank">
+                {{ $s.title }}
+              </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end}}
   </section>
 
   {{ .Content }}

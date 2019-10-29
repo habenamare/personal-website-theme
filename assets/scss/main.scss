@@ -46,6 +46,12 @@ $colors: map-merge($colors, $customColors);
     font-family: 'IBM Plex Sans', sans;
     font-size: 1.25rem;
   }
+
+  .social-networks {
+    a {
+      margin-right: 1rem;
+    }
+  }
 }
 
 section.self-description {
