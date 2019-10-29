@@ -48,6 +48,24 @@ $colors: map-merge($colors, $customColors);
   }
 }
 
+section.self-description {
+  background: $light;
+
+  margin-top: 2em;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  
+  p:first-child {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
 #navbar {
   margin-bottom: 0.5rem;
 }
