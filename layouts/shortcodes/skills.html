@@ -1,0 +1,24 @@
+{{ with $.Page.Params.skills }}
+  <section class="skills">
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <h2>What I can do</h2>
+
+        {{ range . }}
+          <div class="skill">
+            <div class="box">
+              <h3>{{ .skill }}</h3>
+
+              {{ $usingLen := len .using }}
+              <p>
+                {{ range $i, $using := .using }}
+                  {{ $using }}{{if ne (add $i 1) $usingLen}},{{ end }}
+                {{ end }}
+              </p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}
