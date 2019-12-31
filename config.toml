@@ -4,7 +4,11 @@
   [[params.navItems]]
     title = "Home"
     path = "/"
-  
+
   [[params.navItems]]
-    title = "Blog"
-    path = "/blog"
+    title = "Articles"
+    path = "/post"
+
+  [[params.navItems]]
+    title = "Projects"
+    path = "/project"
