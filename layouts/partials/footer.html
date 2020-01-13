@@ -1,19 +1,30 @@
 <footer>
   <div class="level">
-      <div class="level-item">
-        © 2020 · {{ .Site.Params.fullName }}
-      </div>
-  </div>
-  <div class="level">
     <div class="level-item">
-      <a href="https://bulma.io" target="_blank">
-        <img
-          src="/images/made-with-bulma.png"
-          alt="Made with Bulma"
-          width="128"
-          height="24"
-        />
-      </a>
+      <div class="level">
+        <div class="level-item">
+          © 2020 · {{ .Site.Params.fullName }}
+        </div>
+
+        &nbsp;·&nbsp;
+
+        <div class="level-item">
+          Powered by &nbsp;
+          <a href="https://gohugo.io" target="_blank">
+            Hugo
+          </a>
+          &nbsp; & &nbsp;
+          <a href="https://bulma.io" target="_blank">
+            Bulma
+            <!-- <img
+              src="/images/made-with-bulma.png"
+              alt="Made with Bulma"
+              width="128"
+              height="24"
+            /> -->
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
