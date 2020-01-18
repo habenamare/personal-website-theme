@@ -6,7 +6,7 @@
 >
   {{ range $i, $navItem :=  .Site.Params.navItems }}
     <div class="level-item">
-      <a class="is-size-3" href="{{ $navItem.path }}">
+      <a href="{{ $navItem.path }}">
         {{ $navItem.title }}
       </a>
     </div>
