@@ -1,9 +1,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-<link rel="stylesheet" href="fonts/ibm-plex-sans/ibm-plex-sans.css" />
-<link rel="stylesheet" href="fonts/ibm-plex-serif/ibm-plex-serif.css" />
-<link rel="stylesheet" href="fonts/inter/inter.css" />
-<link rel="stylesheet" href="fonts/roboto-slab/roboto-slab.css" />
+<link
+  rel="stylesheet"
+  href="{{ .Site.BaseURL }}fonts/ibm-plex-sans/ibm-plex-sans.css"
+/>
+<link
+  rel="stylesheet"
+  href="{{ .Site.BaseURL }}fonts/ibm-plex-serif/ibm-plex-serif.css"
+/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}fonts/inter/inter.css" />
+<link
+  rel="stylesheet"
+  href="{{ .Site.BaseURL }}fonts/roboto-slab/roboto-slab.css"
+/>
 
 {{ $scss := resources.Get "scss/main.scss" }}
 {{ $style := $scss | resources.ToCSS | resources.Minify | fingerprint }}
