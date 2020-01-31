@@ -1,0 +1,31 @@
+{{ define "main" }}
+  <article class="guides">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          <h1>{{ .Title }}</h1>
+
+          <p class="publish-date">
+            {{ .PublishDate.Format "Jan 2, 2006" }}
+          </p>
+
+          {{ .Content }}
+
+          {{ with .Params.links }}
+            <h2>Links</h2>
+
+            <ul>
+              {{ range $l := . }}
+                <li>
+                  <a href="{{ $l.link }}" target="_blank">
+                    {{ $l.title }}
+                  </a>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end}}
+        </div>
+      </div>
+    </div>
+  </article>
+{{ end }}

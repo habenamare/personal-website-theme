@@ -8,6 +8,9 @@
 $family-sans-serif:	'IBM Plex Sans', $family-sans-serif;
 
 // Setup derived variables
+$primary: #164450;
+$primary-invert: findColorInvert($primary);
+
 $family-primary: $family-sans-serif;
 $family-secondary: $family-sans-serif;
 
@@ -109,6 +112,20 @@ section.skills {
 
   .level-item a {
     font-size: 1.5rem;
+  }
+}
+
+.guides {
+  margin-top: 2rem;
+
+  h1 {
+    margin-bottom: 0;
+    color: $primary;
+    text-align: center;
+  }
+
+  .publish-date {
+    text-align: center;
   }
 }
 
