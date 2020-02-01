@@ -140,3 +140,8 @@ section.skills {
     font-weight: normal;
   }
 }
+
+::selection {
+  background-color: $primary;
+  color: #fff;
+}
