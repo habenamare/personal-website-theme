@@ -31,6 +31,43 @@ $colors: map-merge($colors, $customColors);
 // Import the remaining part of Bulma
 @import "bulma/bulma.sass";
 
+// Bulma breakpoints
+$mobile: 768px; // <=768px
+$tablet: 769px; // >=769px
+$desktop: 1024px; // >=1024px && <=1215px;
+$widescreen: 1216px; // >=1216px && <=1407px
+$fullhd: 1408px; // >=1408px and above
+
+@mixin on-mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin from-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  } 
+}
+
+@mixin from-widescreen {
+  @media screen and (min-width: $widescreen) {
+    @content;
+  } 
+}
+
+@mixin from-fullhd {
+  @media screen and (min-width: $fullhd) {
+    @content;
+  }
+}
+
 #hero {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
