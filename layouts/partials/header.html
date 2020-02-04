@@ -1,14 +1,16 @@
-<nav
-  id="navbar"
-  class="navbar level"
-  role="navigation"
-  aria-label="main navigation"
->
-  {{ range $i, $navItem :=  .Site.Params.navItems }}
-    <div class="level-item">
-      <a href="{{ $navItem.path }}">
-        {{ $navItem.title }}
-      </a>
-    </div>
-  {{ end }}
+<nav class="main-navbar" role="navigation" aria-label="main navigation">
+  <ul>
+    {{ range $i, $navItem := .Site.Params.navItems }}
+      {{ $active := "" }}
+      {{ if (eq $i 0) }}
+        {{ $active = "active" }}
+      {{ end }}
+
+      <li>
+        <a class="main-navbar-item {{ $active }}" href="{{ $navItem.path }}">
+          {{ $navItem.title }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
 </nav>

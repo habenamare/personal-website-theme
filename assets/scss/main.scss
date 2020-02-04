@@ -20,6 +20,7 @@ $body-family: $family-primary;
 // Setup custom colors
 $grey-medium-light:hsl(0, 0%, 60%);
 $grey-medium-light-invert: findColorInvert($grey-medium-light); // stylelint-disable-line
+$primary-tint-30: mix(white, $primary, 30%);
 
 // Add custom color variables to the color map
 @import "bulma/sass/utilities/derived-variables.sass";
@@ -65,6 +66,56 @@ $fullhd: 1408px; // >=1408px and above
 @mixin from-fullhd {
   @media screen and (min-width: $fullhd) {
     @content;
+  }
+}
+
+.main-navbar {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    li {
+      flex: auto;
+      text-align: center;
+    }
+
+    li a {
+      padding: 0.5rem;
+      border-radius: 7px;
+      color: $primary-tint-30;
+      font-weight: 500;
+    }
+
+    li a.active {
+      color: $primary;
+      font-weight: 700;
+    }
+
+    li a:hover {
+      color: $primary;
+    }
+  }
+
+  @include on-mobile() {
+    ul {
+      li:first-child a {
+        margin-left: 0.8rem;
+      }
+  
+      li a {
+        margin-right: 0.8rem;
+      }
+    }
+  }
+
+  @include from-desktop() {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -141,14 +192,6 @@ section.skills {
       font-size: 1.2rem;
       text-align: left;
     }
-  }
-}
-
-#navbar {
-  margin-bottom: 0.5rem;
-
-  .level-item a {
-    font-size: 1.5rem;
   }
 }
 
