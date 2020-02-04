@@ -2,7 +2,19 @@
   <ul>
     {{ range $i, $navItem := .Site.Params.navItems }}
       {{ $active := "" }}
-      {{ if (eq $i 0) }}
+
+      {{ if eq "/" $navItem.path }}
+        {{ if eq "homepage" $.Type }}
+          <!--
+            If the nav item's path is "/" and the content's type is "homepage",
+          -->
+          {{ $active = "active" }}
+        {{ end }}
+      {{ else if eq (slicestr $navItem.path 1) $.Type }}
+        <!--
+          If the nav item's path (without its first character) is equal to the
+          content's type,
+        -->
         {{ $active = "active" }}
       {{ end }}
 
