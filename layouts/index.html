@@ -1,46 +1,7 @@
 {{ define "main" }}
-  <section id="hero">
-    {{ with .Params.profileImage }}
-      <div class="level">
-        <div class="level-item">
-          <img
-            class="profile-image"
-            width="250"
-            height="250"
-            src="{{ . }}"
-          />
-        </div>
-      </div>
-    {{ end }}
-
-    <div class="columns">
-      <div class="column is-6 is-offset-3">
-        <p class="full-name">
-          {{ .Site.Params.fullName }}
-        </p>
-
-        {{ with .Params.shortDescription }}
-          <p class="short-description">
-            {{ . }}
-          </p>
-        {{ end }}
-      </div>
-    </div>
-
-    {{ with .Params.socialNetworks }}
-      <div class="social-networks">
-        <div class="columns">
-          <div class="column is-6 is-offset-3">
-            {{ range $s := . }}
-              <a href="{{ $s.link }}" target="_blank">
-                {{ $s.title }}
-              </a>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    {{ end}}
-  </section>
+  <div class="content">
+    <h1>Homepage</h1>
+  </div>
 
   {{ .Content }}
 
