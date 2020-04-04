@@ -1,11 +1,17 @@
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
+  <section class="default-list">
+    <div class="columns justify-content-center">
+      <div class="column is-half">
+        <h1 class="title">{{ .Title }}</h1>
 
-  <ul>
-    {{ range .Pages }}
-      <li>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </li>
-    {{ end }}
-  </ul>
+        <ul>
+          {{ range .Pages }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </section>
 {{ end }}

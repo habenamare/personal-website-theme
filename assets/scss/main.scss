@@ -73,6 +73,27 @@ $fullhd: 1408px; // >=1408px and above
   justify-content: center;
 }
 
+.default-list {
+  h1 {
+    text-align: center;
+  }
+
+  ul {
+    li {
+      font-weight: 500;
+      background: linear-gradient(87deg, mix(white, $primary, 95%), mix(white, $primary, 95%));
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 1rem;
+
+      a {
+        color: mix(white, $primary, 10%);
+      }
+    }
+  }
+}
+
+
 .main-navbar {
   margin-top: 0.3rem;
   font-size: 1.3rem;
