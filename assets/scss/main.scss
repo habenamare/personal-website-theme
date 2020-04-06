@@ -251,3 +251,14 @@ section.skills {
   background-color: $primary;
   color: #fff;
 }
+
+div.highlight {
+  $boxShadowColor: rgba(hsl(0, 0%, 4%), 0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 3px $boxShadowColor, 0 0 0 1px $boxShadowColor;
+
+  pre code {
+    font-family: 'DejaVu Sans Mono', monospace;
+    font-size: 1.1rem;
+  }
+}
