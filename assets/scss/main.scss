@@ -10,6 +10,7 @@ $family-sans-serif:	'IBM Plex Sans', $family-sans-serif;
 // Setup derived variables
 $primary: #164450;
 $primary-invert: findColorInvert($primary);
+$notification-radius: 8px;
 
 $family-primary: $family-sans-serif;
 $family-secondary: $family-sans-serif;
