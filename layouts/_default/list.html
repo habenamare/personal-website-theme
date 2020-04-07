@@ -2,7 +2,12 @@
   <section class="default-list">
     <div class="columns justify-content-center">
       <div class="column is-half">
-        <h1 class="title">{{ .Title }}</h1>
+        {{/*  Don't display heading on top-level sections. */}}
+        {{ if eq "section" .Kind }}
+          {{ if ne .CurrentSection .FirstSection }}
+            <h1 class="title">{{ .Title }}</h1>
+          {{ end }}
+        {{ end }}
 
         <ul>
           {{ range .Pages }}
