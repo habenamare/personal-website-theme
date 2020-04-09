@@ -97,6 +97,7 @@ $fullhd: 1408px; // >=1408px and above
 
 .main-navbar {
   margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
   font-size: 1.3rem;
 
   ul {
@@ -146,7 +147,6 @@ $fullhd: 1408px; // >=1408px and above
 }
 
 #hero {
-  padding-top: 2rem;
   padding-bottom: 1.5rem;
   text-align: center;
 
@@ -222,8 +222,6 @@ section.skills {
 }
 
 .guides {
-  margin-top: 2rem;
-
   h1 {
     margin-bottom: 0;
     color: $primary;
