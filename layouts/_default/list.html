@@ -1,7 +1,7 @@
 {{ define "main" }}
   <section class="default-list">
     <div class="columns justify-content-center">
-      <div class="column is-half">
+      <div class="column is-half is-two-fifths-fullhd">
         {{/*  Don't display heading on top-level sections. */}}
         {{ if eq "section" .Kind }}
           {{ if ne .CurrentSection .FirstSection }}
@@ -9,13 +9,29 @@
           {{ end }}
         {{ end }}
 
-        <ul>
-          {{ range .Pages }}
-            <li>
+        {{ range .Pages }}
+          <div class="page-list-item">
+            <p class="page-list-item-title">
               <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
-          {{ end }}
-        </ul>
+            </p>
+
+            <p class="page-list-item-date">
+              {{ .PublishDate.Format "January 02, 2006" }}
+            </p>
+
+            <div class="page-list-item-type">
+              {{ if eq "articles" .Type }}
+                ARTICLE
+              {{ else if eq "guides" .Type }}
+                GUIDE
+              {{ else if eq "projects" .Type }}
+                PROJECT
+              {{ else }}
+                POST
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
       </div>
     </div>
   </section>

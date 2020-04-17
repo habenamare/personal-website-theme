@@ -10,7 +10,6 @@ $family-sans-serif:	'IBM Plex Sans', $family-sans-serif;
 // Setup derived variables
 $primary: #164450;
 $primary-invert: findColorInvert($primary);
-$notification-radius: 8px;
 
 $family-primary: $family-sans-serif;
 $family-secondary: $family-sans-serif;
@@ -29,6 +28,10 @@ $customColors: (
   "grey-medium-light":($grey-medium-light, $grey-medium-light-invert)
 );
 $colors: map-merge($colors, $customColors);
+
+$notification-radius: 8px;
+$tag-background-color: mix(white, $primary, 65%);
+$tag-color: #fff;
 
 // Import the remaining part of Bulma
 @import "bulma/bulma.sass";
@@ -79,17 +82,54 @@ $fullhd: 1408px; // >=1408px and above
     text-align: center;
   }
 
-  ul {
-    li {
-      font-weight: 500;
-      background: linear-gradient(87deg, mix(white, $primary, 95%), mix(white, $primary, 95%));
-      border-radius: 0.5rem;
-      padding: 2rem;
-      margin-bottom: 1rem;
+  .page-list-item {
+    position: relative;
+    background: linear-gradient(87deg, mix(white, $primary, 95%), mix(white, $primary, 95%));
+    // border-bottom: 1px solid #dbdbdb;
+    border-radius: 0.5rem;
 
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1.75rem;
+    padding-bottom: 2rem;
+
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+      border-left: 2px solid mix(white, $primary, 65%);
+      padding-left: 1.65rem;
+    }
+    
+    .page-list-item-title {
       a {
-        color: mix(white, $primary, 10%);
+        color: mix(white, $primary, 15%);
       }
+    }
+
+    .page-list-item-date {
+      position: absolute;
+      top: 0.35rem;
+      right: 0.35rem;
+
+      color: $grey-medium-light;
+      font-size: 0.75rem;
+    }
+
+    .page-list-item-type {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      background: mix(white, $primary, 40%);
+      border-radius: $radius;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 0.25rem;
+      
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.7rem;
     }
   }
 }
