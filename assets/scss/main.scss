@@ -205,8 +205,12 @@ $fullhd: 1408px; // >=1408px and above
   }
 
   .social-networks {
-    a {
-      margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+
+    .link {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
     }
   }
 }
