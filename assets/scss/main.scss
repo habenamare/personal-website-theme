@@ -134,6 +134,38 @@ $fullhd: 1408px; // >=1408px and above
   }
 }
 
+.guide-list {
+  h1 {
+    text-align: center;
+  }
+
+  .page-list-item {
+    position: relative;
+    background: linear-gradient(87deg, mix(white, $primary, 95%), mix(white, $primary, 95%));
+    border-radius: 0.5rem;
+
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1.75rem;
+    padding-bottom: 2rem;
+
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+    }
+    
+    .page-list-item-title {
+      a {
+        color: mix(white, $primary, 15%);
+      }
+    }
+
+    .page-list-item-date {
+      font-size: 0.8rem;
+    }
+  }
+}
 
 .main-navbar {
   margin-top: 0.3rem;
