@@ -91,7 +91,7 @@ $fullhd: 1408px; // >=1408px and above
     border-radius: 0.5rem;
 
     margin-bottom: 2rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 1.75rem;
     padding-bottom: 2rem;
 
@@ -99,8 +99,10 @@ $fullhd: 1408px; // >=1408px and above
 
     &:hover {
       cursor: pointer;
-      border-left: 2px solid mix(white, $primary, 65%);
-      padding-left: 1.65rem;
+
+      .page-list-item-title {
+        text-decoration: underline;
+      }
     }
     
     .page-list-item-title {
@@ -110,23 +112,18 @@ $fullhd: 1408px; // >=1408px and above
     }
 
     .page-list-item-date {
-      position: absolute;
-      top: 0.35rem;
-      right: 0.35rem;
-
-      color: $grey-medium-light;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
     }
 
     .page-list-item-type {
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 0;
 
       background: mix(white, $primary, 40%);
       border-radius: $radius;
-      border-top-right-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
       padding: 0.25rem;
       
       color: #fff;
@@ -149,7 +146,7 @@ $fullhd: 1408px; // >=1408px and above
     border-radius: 0.5rem;
 
     margin-bottom: 2rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-left: 1.75rem;
     padding-bottom: 2rem;
 
@@ -157,6 +154,10 @@ $fullhd: 1408px; // >=1408px and above
 
     &:hover {
       cursor: pointer;
+
+      .page-list-item-title {
+        text-decoration: underline;
+      }
     }
     
     .page-list-item-title {
