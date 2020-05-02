@@ -78,6 +78,8 @@ $fullhd: 1408px; // >=1408px and above
 }
 
 .homepage, .default-list {
+  font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
+
   h1 {
     text-align: center;
   }
@@ -135,6 +137,8 @@ $fullhd: 1408px; // >=1408px and above
 }
 
 .guide-list {
+  font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
+
   h1 {
     text-align: center;
   }
@@ -232,7 +236,7 @@ $fullhd: 1408px; // >=1408px and above
   }
 
   .short-description {
-    font-family: 'IBM Plex Sans', sans;
+    font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
     font-size: 1.25rem;
   }
 
@@ -298,6 +302,8 @@ section.skills {
 }
 
 .guides {
+  font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
+
   h1 {
     margin-bottom: 0;
     color: $primary;
@@ -349,5 +355,6 @@ body {
 }
 
 footer {
+  font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
   padding: 0.5rem;
 }
