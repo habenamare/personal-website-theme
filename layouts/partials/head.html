@@ -1,5 +1,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
+<title>
+  {{ if eq "homepage" $.Type }}
+    Home
+  {{ else if eq "about" $.Type }}
+    About
+  {{ else }}
+    {{ if and (eq "section" .Kind) (eq .CurrentSection .FirstSection) }}
+      {{/* If this is a root section */}}
+      {{ humanize $.Type }}
+    {{ else }}
+      {{ .Title }} | {{ humanize $.Type }}
+    {{ end }}
+  {{ end }}
+</title>
+
 <link
   rel="stylesheet"
   href="{{ .Site.BaseURL }}fonts/ibm-plex-sans/ibm-plex-sans.css"
