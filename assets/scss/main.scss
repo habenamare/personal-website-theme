@@ -77,6 +77,13 @@ $fullhd: 1408px; // >=1408px and above
   justify-content: center;
 }
 
+.main-content {
+  @include on-mobile() {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .homepage, .default-list {
   font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
 
