@@ -1,17 +1,21 @@
 {{ define "main" }}
   <section id="hero">
+    {{ $profileImagePath := "/images/default-profile.jpg" }}
+
     {{ with .Params.profileImage }}
-      <div class="level">
-        <div class="level-item">
-          <img
-            class="profile-image"
-            width="250"
-            height="250"
-            src="{{ . }}"
-          />
-        </div>
-      </div>
+      {{ $profileImagePath = . }}
     {{ end }}
+
+    <div class="level">
+      <div class="level-item">
+        <img
+          class="profile-image"
+          width="250"
+          height="250"
+          src="{{ $profileImagePath }}"
+        />
+      </div>
+    </div>
 
     <div class="columns">
       <div class="column is-6 is-offset-3">
