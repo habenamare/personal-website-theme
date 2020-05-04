@@ -376,6 +376,15 @@ footer {
 
   padding: 0.5rem;
   margin-top: 2rem;
+
+  span {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+
+    @include on-mobile() {
+      display: none;
+    }
+  }
 }
 
 .nothing-yet {
