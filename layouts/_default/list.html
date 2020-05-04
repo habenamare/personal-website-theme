@@ -9,28 +9,34 @@
           {{ end }}
         {{ end }}
 
-        {{ range .Pages }}
-          <div class="page-list-item">
-            <p class="page-list-item-title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </p>
-
-            <p class="page-list-item-date">
-              {{ .PublishDate.Format "January 02, 2006" }}
-            </p>
-
-            <div class="page-list-item-type">
-              {{ if eq "articles" .Type }}
-                ARTICLE
-              {{ else if eq "guides" .Type }}
-                GUIDE
-              {{ else if eq "projects" .Type }}
-                PROJECT
-              {{ else }}
-                POST
-              {{ end }}
-            </div>
+        {{ if eq 0 (len .Pages) }}
+          <div class="nothing-yet">
+            <p>Nothing Yet</p>
           </div>
+        {{ else }}
+          {{ range .Pages }}
+            <div class="page-list-item">
+              <p class="page-list-item-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </p>
+
+              <p class="page-list-item-date">
+                {{ .PublishDate.Format "January 02, 2006" }}
+              </p>
+
+              <div class="page-list-item-type">
+                {{ if eq "articles" .Type }}
+                  ARTICLE
+                {{ else if eq "guides" .Type }}
+                  GUIDE
+                {{ else if eq "projects" .Type }}
+                  PROJECT
+                {{ else }}
+                  POST
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
         {{ end }}
       </div>
     </div>
