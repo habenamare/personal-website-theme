@@ -17,7 +17,7 @@
             <ul>
               {{ range $l := . }}
                 <li>
-                  <a href="{{ $l.link }}" target="_blank">
+                  <a href="{{ $l.link }}" rel="noopener" target="_blank">
                     {{ $l.title }}
                   </a>
                 </li>

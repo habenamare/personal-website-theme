@@ -35,7 +35,7 @@
       <div class="social-networks">
         {{ range $s := . }}
           <div class="link">
-            <a href="{{ $s.link }}" target="_blank">
+            <a href="{{ $s.link }}" rel="noopener" target="_blank">
               {{ $s.title }}
             </a>
           </div>
