@@ -103,18 +103,15 @@ $fullhd: 1408px; // >=1408px and above
     padding-bottom: 2rem;
 
     font-weight: 500;
-
-    &:hover {
-      cursor: pointer;
-
-      .page-list-item-title {
-        text-decoration: underline;
-      }
-    }
     
     .page-list-item-title {
       a {
         color: mix(white, $primary, 15%);
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -158,18 +155,15 @@ $fullhd: 1408px; // >=1408px and above
     padding-bottom: 2rem;
 
     font-weight: 500;
-
-    &:hover {
-      cursor: pointer;
-
-      .page-list-item-title {
-        text-decoration: underline;
-      }
-    }
     
     .page-list-item-title {
       a {
         color: mix(white, $primary, 15%);
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
 

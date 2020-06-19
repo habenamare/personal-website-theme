@@ -18,12 +18,4 @@
 
     {{- partial "footer.html" . -}}
   </body>
-
-  <script>
-    const listItemDivs = document.querySelectorAll('.page-list-item');
-
-    listItemDivs.forEach(div => {
-      div.onclick = e => div.querySelector('.page-list-item-title a').click();
-    });
-  </script>
 </html>
