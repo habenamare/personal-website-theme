@@ -37,11 +37,18 @@ $tag-color: #fff;
 @import "bulma/bulma.sass";
 
 // Bulma breakpoints
+$smallmobile: 390px; // <= 390px 
 $mobile: 768px; // <=768px
 $tablet: 769px; // >=769px
-$desktop: 1024px; // >=1024px && <=1215px;
-$widescreen: 1216px; // >=1216px && <=1407px
-$fullhd: 1408px; // >=1408px and above
+$desktop: 1024px; // >=1024px
+$widescreen: 1216px; // >=1216px
+$fullhd: 1408px; // >=1408px
+
+@mixin on-smallmobile {
+  @media screen and (max-width: $smallmobile) {
+    @content;
+  }
+}
 
 @mixin on-mobile {
   @media screen and (max-width: $mobile) {
@@ -235,11 +242,19 @@ $fullhd: 1408px; // >=1408px and above
   .full-name {
     font-family: 'Roboto Slab', serif;
     font-size: 3rem;
+
+    @include on-smallmobile() {
+      font-size: 2.2rem;
+    }
   }
 
   .short-description {
     font-family: 'Ruda', 'IBM Plex Sans', sans-serif;
     font-size: 1.25rem;
+
+    @include on-smallmobile() {
+      font-size: 1.15rem;
+    }
   }
 
   .social-networks {
@@ -279,6 +294,10 @@ section.skills {
     font-family: 'Roboto Slab', serif;
     font-size: 2rem;
     margin-bottom: 1rem;
+
+    @include on-smallmobile() {
+      font-size: 1.6rem;
+    }
   }
 
   .skill {
@@ -294,11 +313,19 @@ section.skills {
       font-weight: 500;
       text-align: left;
       margin-bottom: 0.1rem;
+
+      @include on-smallmobile() {
+        font-size: 1.2rem;
+      }
     }
     
     p {
       font-size: 1.2rem;
       text-align: left;
+
+      @include on-smallmobile() {
+        font-size: 1rem;
+      }
     }
   }
 }
