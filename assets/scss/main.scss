@@ -364,6 +364,10 @@ section.skills {
     font-size: 1.4rem;
     font-weight: 500;
   }
+
+  ul > li > ul > li {
+    line-height: 1.8rem;
+  }
 }
 
 ::selection {
