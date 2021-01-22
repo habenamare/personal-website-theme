@@ -4,15 +4,15 @@
 
 <title>
   {{ if eq "homepage" $.Type }}
-    Home
+    Home — {{ .Site.Params.fullName }}
   {{ else if eq "about" $.Type }}
-    About
+    {{ .Site.Params.fullName }}
   {{ else }}
     {{ if and (eq "section" .Kind) (eq .CurrentSection .FirstSection) }}
       {{/* If this is a root section */}}
-      {{ humanize $.Type }}
+      {{ humanize $.Type }} — {{ .Site.Params.fullName }}
     {{ else }}
-      {{ .Title }} | {{ humanize $.Type }}
+      {{ .Title }} | {{ humanize $.Type }} — {{ .Site.Params.fullName }}
     {{ end }}
   {{ end }}
 </title>
